@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>전주E재활의학과의원 - 전주 통원재활 전문 | 뇌졸중·척추손상·보행재활</title>
+    <meta name="description" content="전주 통원재활 전문 의원. 뇌졸중, 척추손상, 보행장애, 근골격계 재활 프로그램. 일상으로의 복귀를 위한 맞춤형 치료 계획.">
+    <meta name="keywords" content="전주 재활의학과, 전주 통원재활, 뇌졸중 재활, 척추손상 재활, 보행재활, 전주 물리치료">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="전주E재활의학과의원 - 통원재활 전문">
+    <meta property="og:description" content="일상으로의 복귀, 통원재활로 시작하세요. 전주 통원재활 전문 의원.">
+    <meta property="og:url" content="https://jeonju-e-rehab.com">
+    <meta property="og:image" content="https://jeonju-e-rehab.com/og-image.jpg">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Pretendard fallback -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+        
+        /* 섹션 fade-in 애니메이션 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* FAQ 아코디언 */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-answer.active {
+            max-height: 500px;
+        }
+        
+        /* 상단 고정 헤더 */
+        .header-sticky {
+            transition: all 0.3s ease;
+        }
+        
+        /* 하단 고정 CTA 바 */
+        .bottom-cta {
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        @media (min-width: 1024px) {
+            .bottom-cta {
+                transform: translateY(100px);
+            }
+            
+            .bottom-cta.visible {
+                transform: translateY(0);
+            }
+        }
+    </style>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "전주E재활의학과의원",
+      "image": "https://jeonju-e-rehab.com/clinic-photo.jpg",
+      "description": "전주 통원재활 전문 의원. 뇌졸중, 척추손상, 보행장애, 근골격계 재활 프로그램 제공.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "전주시 덕진구 예시로 123",
+        "addressLocality": "전주시",
+        "addressRegion": "전라북도",
+        "postalCode": "54900",
+        "addressCountry": "KR"
+      },
+      "telephone": "+82-63-1234-5678",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "priceRange": "₩₩",
+      "medicalSpecialty": "Rehabilitation Medicine"
+    }
+    </script>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- 상단 고정 헤더 -->
+    <header class="header-sticky fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- 로고 -->
+            <div class="flex items-center">
+                <a href="/" class="text-xl md:text-2xl font-bold text-blue-600">
+                    전주E재활의학과
+                </a>
+            </div>
+            
+            <!-- CTA 버튼 (상단) -->
+            <div class="flex gap-2 md:gap-3">
+                <a href="tel:063-1234-5678" class="bg-green-500 hover:bg-green-600 text-white px-3 md:px-4 py-2 rounded-lg flex items-center gap-1 transition">
+                    <span class="text-lg">📞</span>
+                    <span class="hidden md:inline text-sm font-medium">전화</span>
+                </a>
+                <a href="http://pf.kakao.com/_xxxxx" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-3 md:px-4 py-2 rounded-lg flex items-center gap-1 transition">
+                    <span class="text-lg">💬</span>
+                    <span class="hidden md:inline text-sm font-medium">카톡</span>
+                </a>
+                <a href="#consultation" class="bg-blue-600 hover:bg-blue-700 text-white px-3 md:px-4 py-2 rounded-lg flex items-center gap-1 transition">
+                    <span class="text-lg">📝</span>
+                    <span class="hidden md:inline text-sm font-medium">상담</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section class="pt-20 md:pt-24 pb-12 md:pb-20 bg-gradient-to-br from-blue-50 to-blue-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <!-- 좌측: 텍스트 -->
+                <div class="flex-1 text-center md:text-left">
+                    <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                        통원으로<br>
+                        <span class="text-blue-600">다시 일상으로</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-700 mb-6 md:mb-8">
+                        전주 통원재활 전문 의원<br>
+                        입원 없이, 일상을 유지하며 회복하세요
+                    </p>
+                    <a href="#consultation" class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold px-8 py-4 rounded-lg shadow-lg transition transform hover:scale-105">
+                        상담신청하기
+                    </a>
+                    <p class="mt-4 text-sm text-gray-600">
+                        ✓ 초기평가 무료상담 &nbsp; ✓ 맞춤형 재활 계획
+                    </p>
+                </div>
+                
+                <!-- 우측: 이미지 placeholder -->
+                <div class="flex-1 w-full">
+                    <div class="bg-gray-300 rounded-lg aspect-video md:aspect-square flex items-center justify-center">
+                        <span class="text-gray-500 text-sm">[재활 치료 이미지]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 상황 선택기 -->
+    <section class="py-12 md:py-16 bg-white fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">
+                어떤 도움이 필요하신가요?
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <!-- 버튼 1: 뇌졸중 -->
+                <a href="/program-stroke.html" class="bg-blue-50 hover:bg-blue-100 border-2 border-blue-200 rounded-lg p-6 text-center transition transform hover:scale-105 hover:shadow-lg">
+                    <div class="text-4xl mb-3">🧠</div>
+                    <h3 class="font-bold text-lg mb-2">뇌졸중</h3>
+                    <p class="text-sm text-gray-600">편마비·언어장애<br>일상 회복</p>
+                </a>
+                
+                <!-- 버튼 2: 척추손상 -->
+                <a href="/program-spinal.html" class="bg-green-50 hover:bg-green-100 border-2 border-green-200 rounded-lg p-6 text-center transition transform hover:scale-105 hover:shadow-lg">
+                    <div class="text-4xl mb-3">🦴</div>
+                    <h3 class="font-bold text-lg mb-2">척추손상</h3>
+                    <p class="text-sm text-gray-600">척수손상 후<br>기능 회복</p>
+                </a>
+                
+                <!-- 버튼 3: 보행장애 -->
+                <a href="/program-gait.html" class="bg-purple-50 hover:bg-purple-100 border-2 border-purple-200 rounded-lg p-6 text-center transition transform hover:scale-105 hover:shadow-lg">
+                    <div class="text-4xl mb-3">🚶</div>
+                    <h3 class="font-bold text-lg mb-2">보행장애</h3>
+                    <p class="text-sm text-gray-600">걷기 어려움<br>균형·근력 강화</p>
+                </a>
+                
+                <!-- 버튼 4: 근골격계 -->
+                <a href="/program-msk.html" class="bg-orange-50 hover:bg-orange-100 border-2 border-orange-200 rounded-lg p-6 text-center transition transform hover:scale-105 hover:shadow-lg">
+                    <div class="text-4xl mb-3">💪</div>
+                    <h3 class="font-bold text-lg mb-2">근골격계</h3>
+                    <p class="text-sm text-gray-600">관절·근육 통증<br>기능 재활</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 통원재활 3가지 장점 -->
+    <section class="py-12 md:py-16 bg-gray-50 fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">
+                왜 통원재활인가요?
+            </h2>
+            <p class="text-center text-gray-600 mb-10">
+                입원 재활과 동일한 전문 치료, 일상은 유지하며 회복
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 장점 1 -->
+                <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                    <div class="text-5xl mb-4">🏠</div>
+                    <h3 class="font-bold text-xl mb-3">일상 속 재활</h3>
+                    <p class="text-gray-700">
+                        병원 입원 없이 집에서 생활하며 주 2~5회 방문 치료. 가족과 함께 회복의 여정을 걷습니다.
+                    </p>
+                </div>
+                
+                <!-- 장점 2 -->
+                <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                    <div class="text-5xl mb-4">👨‍⚕️</div>
+                    <h3 class="font-bold text-xl mb-3">전문 치료팀</h3>
+                    <p class="text-gray-700">
+                        재활의학과 전문의, 물리치료사, 작업치료사가 팀을 이뤄 개인 맞춤형 재활 계획을 수립합니다.
+                    </p>
+                </div>
+                
+                <!-- 장점 3 -->
+                <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="font-bold text-xl mb-3">비용 효율적</h3>
+                    <p class="text-gray-700">
+                        입원 대비 경제적이며, 건강보험 적용으로 부담을 줄입니다. 교통비 지원 등 혜택도 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 치료 프로세스 -->
+    <section class="py-12 md:py-16 bg-white fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">
+                치료 프로세스
+            </h2>
+            <p class="text-center text-gray-600 mb-10">
+                과학적 평가부터 일상 복귀까지, 체계적인 5단계
+            </p>
+            
+            <!-- 모바일: 세로 타임라인 / 데스크톱: 가로 스텝 -->
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row md:justify-between gap-6 md:gap-4">
+                    <!-- 스텝 1 -->
+                    <div class="flex-1 text-center">
+                        <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-3">1</div>
+                        <h3 class="font-bold mb-2">초기 상담</h3>
+                        <p class="text-sm text-gray-600">증상·병력 청취<br>목표 설정</p>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center">
+                        <div class="h-1 w-8 bg-blue-300"></div>
+                    </div>
+                    
+                    <!-- 스텝 2 -->
+                    <div class="flex-1 text-center">
+                        <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-3">2</div>
+                        <h3 class="font-bold mb-2">정밀 평가</h3>
+                        <p class="text-sm text-gray-600">기능·근력·보행<br>객관적 측정</p>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center">
+                        <div class="h-1 w-8 bg-blue-300"></div>
+                    </div>
+                    
+                    <!-- 스텝 3 -->
+                    <div class="flex-1 text-center">
+                        <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-3">3</div>
+                        <h3 class="font-bold mb-2">계획 수립</h3>
+                        <p class="text-sm text-gray-600">맞춤형 프로그램<br>일정 조율</p>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center">
+                        <div class="h-1 w-8 bg-blue-300"></div>
+                    </div>
+                    
+                    <!-- 스텝 4 -->
+                    <div class="flex-1 text-center">
+                        <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-3">4</div>
+                        <h3 class="font-bold mb-2">집중 치료</h3>
+                        <p class="text-sm text-gray-600">주 2~5회<br>전문 재활 치료</p>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center">
+                        <div class="h-1 w-8 bg-blue-300"></div>
+                    </div>
+                    
+                    <!-- 스텝 5 -->
+                    <div class="flex-1 text-center">
+                        <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-3">5</div>
+                        <h3 class="font-bold mb-2">일상 복귀</h3>
+                        <p class="text-sm text-gray-600">재평가·유지관리<br>독립적 생활</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 질환별 프로그램 소개 -->
+    <section class="py-12 md:py-16 bg-gray-50 fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">
+                질환별 재활 프로그램
+            </h2>
+            <p class="text-center text-gray-600 mb-10">
+                각 질환 특성에 맞춘 전문 재활 프로그램
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <!-- 프로그램 1: 뇌졸중 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">뇌졸중 재활</h3>
+                        <p class="text-blue-100">편마비·언어장애·인지 회복</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-600">✓</span>
+                                <span>보행 훈련 및 균형 개선</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-600">✓</span>
+                                <span>상지 기능 회복 (일상동작 훈련)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-600">✓</span>
+                                <span>언어·인지 치료 협진</span>
+                            </li>
+                        </ul>
+                        <a href="/program-stroke.html" class="text-blue-600 font-semibold hover:underline">자세히 보기 →</a>
+                    </div>
+                </div>
+                
+                <!-- 프로그램 2: 척추손상 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">척추손상 재활</h3>
+                        <p class="text-green-100">척수 손상 후 기능 극대화</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600">✓</span>
+                                <span>근력 강화 및 관절가동범위 유지</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600">✓</span>
+                                <span>이동 능력 훈련 (휠체어·보행)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600">✓</span>
+                                <span>욕창 예방 및 자가관리 교육</span>
+                            </li>
+                        </ul>
+                        <a href="/program-spinal.html" class="text-green-600 font-semibold hover:underline">자세히 보기 →</a>
+                    </div>
+                </div>
+                
+                <!-- 프로그램 3: 보행장애 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-r from-purple-500 to-purple-600 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">보행장애 재활</h3>
+                        <p class="text-purple-100">걷기 능력 회복 집중 프로그램</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-600">✓</span>
+                                <span>보행 분석 및 패턴 교정</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-600">✓</span>
+                                <span>균형·근력 강화 운동</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-600">✓</span>
+                                <span>보조기구 선택 및 적응 훈련</span>
+                            </li>
+                        </ul>
+                        <a href="/program-gait.html" class="text-purple-600 font-semibold hover:underline">자세히 보기 →</a>
+                    </div>
+                </div>
+                
+                <!-- 프로그램 4: 근골격계 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-gradient-to-r from-orange-500 to-orange-600 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">근골격계 재활</h3>
+                        <p class="text-orange-100">관절·근육 통증 및 기능 회복</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-600">✓</span>
+                                <span>통증 완화 치료 (물리치료·도수치료)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-600">✓</span>
+                                <span>관절가동범위 회복 운동</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-600">✓</span>
+                                <span>재발 방지 근력 강화 프로그램</span>
+                            </li>
+                        </ul>
+                        <a href="/program-msk.html" class="text-orange-600 font-semibold hover:underline">자세히 보기 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 시설 & 치료팀 미리보기 -->
+    <section class="py-12 md:py-16 bg-white fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">
+                시설 & 치료팀
+            </h2>
+            <p class="text-center text-gray-600 mb-10">
+                최신 재활 장비와 전문 치료팀이 함께합니다
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+                <!-- 시설 이미지 1 -->
+                <div class="bg-gray-300 rounded-lg aspect-video flex items-center justify-center">
+                    <span class="text-gray-500 text-sm">[운동치료실 사진]</span>
+                </div>
+                
+                <!-- 시설 이미지 2 -->
+                <div class="bg-gray-300 rounded-lg aspect-video flex items-center justify-center">
+                    <span class="text-gray-500 text-sm">[물리치료 장비]</span>
+                </div>
+                
+                <!-- 시설 이미지 3 -->
+                <div class="bg-gray-300 rounded-lg aspect-video flex items-center justify-center">
+                    <span class="text-gray-500 text-sm">[치료팀 사진]</span>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="/facility.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">
+                    시설·치료팀 자세히 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 자주 묻는 질문 (FAQ) -->
+    <section class="py-12 md:py-16 bg-gray-50 fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">
+                자주 묻는 질문
+            </h2>
+            <p class="text-center text-gray-600 mb-10">
+                통원재활에 대해 궁금한 점을 확인하세요
+            </p>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-5 font-semibold flex items-center justify-between hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span>통원재활은 누가 받을 수 있나요?</span>
+                        <span class="text-blue-600 text-xl">+</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-700">
+                            뇌졸중, 척추손상, 파킨슨병, 외상성 뇌손상, 근골격계 질환 등 다양한 환자분들이 대상입니다. 
+                            입원 치료를 마친 후 지속적인 재활이 필요하거나, 일상생활을 유지하며 재활을 원하시는 분께 적합합니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-5 font-semibold flex items-center justify-between hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span>일주일에 몇 번 방문해야 하나요?</span>
+                        <span class="text-blue-600 text-xl">+</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-700">
+                            환자분의 상태와 목표에 따라 주 2~5회 방문을 권장합니다. 
+                            초기 평가 후 재활의학과 전문의가 최적의 치료 빈도를 제안해 드리며, 개인 일정에 맞춰 조율 가능합니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-5 font-semibold flex items-center justify-between hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span>건강보험이 적용되나요?</span>
+                        <span class="text-blue-600 text-xl">+</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-700">
+                            네, 재활의학과 진료 및 물리치료는 건강보험이 적용됩니다. 
+                            본인부담금은 환자분의 보험 유형(건강보험, 의료급여 등)에 따라 다르며, 
+                            상담 시 자세한 비용 안내를 드립니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-5 font-semibold flex items-center justify-between hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span>입원재활과 어떤 차이가 있나요?</span>
+                        <span class="text-blue-600 text-xl">+</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-700">
+                            입원재활은 24시간 병원에 머물며 집중 치료를 받지만, 통원재활은 정해진 시간에 방문해 치료받고 집으로 돌아갑니다. 
+                            일상생활을 유지하며 가족과 함께 생활할 수 있고, 비용 부담도 적습니다. 
+                            치료의 전문성과 효과는 동일하게 제공됩니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-5 font-semibold flex items-center justify-between hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span>초기 평가는 어떻게 진행되나요?</span>
+                        <span class="text-blue-600 text-xl">+</span>
+                    </button>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-700">
+                            첫 방문 시 재활의학과 전문의가 병력과 증상을 상세히 청취하고, 
+                            물리치료사가 근력, 관절가동범위, 보행, 균형 등을 객관적으로 측정합니다. 
+                            평가 결과를 바탕으로 환자분의 목표에 맞춘 맞춤형 재활 계획을 수립합니다. 
+                            초기 평가 상담은 무료로 제공됩니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <p class="text-gray-700 mb-4">더 궁금하신 점이 있으신가요?</p>
+                <a href="tel:063-1234-5678" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-lg transition">
+                    📞 전화상담 신청하기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 오시는 길 & 상담신청 -->
+    <section id="consultation" class="py-12 md:py-16 bg-white fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">
+                오시는 길 & 상담신청
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- 오시는 길 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">오시는 길</h3>
+                    
+                    <!-- 지도 placeholder -->
+                    <div class="bg-gray-300 rounded-lg aspect-video mb-4 flex items-center justify-center">
+                        <span class="text-gray-500 text-sm">[네이버 지도 삽입]</span>
+                    </div>
+                    
+                    <div class="space-y-3 text-gray-700">
+                        <p class="flex items-start gap-2">
+                            <span class="font-semibold min-w-[60px]">주소:</span>
+                            <span>전주시 덕진구 예시로 123 (예시동) 2층</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="font-semibold min-w-[60px]">전화:</span>
+                            <span>063-1234-5678</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="font-semibold min-w-[60px]">진료:</span>
+                            <span>
+                                평일 09:00-18:00<br>
+                                토요일 09:00-13:00<br>
+                                일요일·공휴일 휴진
+                            </span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="font-semibold min-w-[60px]">주차:</span>
+                            <span>건물 지하 주차장 이용 가능 (무료)</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="font-semibold min-w-[60px]">대중교통:</span>
+                            <span>
+                                버스: 123, 456번 (예시정류장 하차)<br>
+                                택시: 전주역에서 약 10분
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 상담신청 폼 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">상담신청</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        간단한 정보를 남겨주시면 빠르게 연락드립니다.<br>
+                        초기평가 무료상담을 받아보세요.
+                    </p>
+                    
+                    <form id="consultationForm" class="space-y-4">
+                        <div>
+                            <label class="block font-semibold mb-1 text-sm">이름 *</label>
+                            <input type="text" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block font-semibold mb-1 text-sm">연락처 *</label>
+                            <input type="tel" name="phone" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="010-1234-5678" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block font-semibold mb-1 text-sm">재활이 필요한 질환</label>
+                            <select name="condition" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">선택해주세요</option>
+                                <option value="stroke">뇌졸중</option>
+                                <option value="spinal">척추손상</option>
+                                <option value="gait">보행장애</option>
+                                <option value="msk">근골격계</option>
+                                <option value="other">기타</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block font-semibold mb-1 text-sm">문의사항</label>
+                            <textarea name="message" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="궁금하신 점을 자유롭게 적어주세요"></textarea>
+                        </div>
+                        
+                        <div class="flex items-start gap-2">
+                            <input type="checkbox" id="privacy" required class="mt-1">
+                            <label for="privacy" class="text-xs text-gray-600">
+                                개인정보 수집 및 이용에 동의합니다. (필수)<br>
+                                수집 항목: 이름, 연락처 / 이용 목적: 상담 연락 / 보유 기간: 3개월
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition">
+                            상담신청 제출하기
+                        </button>
+                    </form>
+                    
+                    <div id="thankYouMessage" class="hidden mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                        <p class="text-green-800 font-semibold mb-2">✅ 상담신청이 접수되었습니다!</p>
+                        <p class="text-sm text-gray-700">
+                            빠른 시일 내에 연락드리겠습니다.<br>
+                            급하신 경우 <a href="tel:063-1234-5678" class="text-blue-600 underline">063-1234-5678</a>로 전화주세요.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+                <!-- 의원 정보 -->
+                <div>
+                    <h4 class="text-white font-bold mb-3">전주E재활의학과의원</h4>
+                    <p class="text-sm">
+                        통원으로 다시 일상으로<br>
+                        전주 통원재활 전문 의원
+                    </p>
+                </div>
+                
+                <!-- 연락처 -->
+                <div>
+                    <h4 class="text-white font-bold mb-3">연락처</h4>
+                    <p class="text-sm space-y-1">
+                        <span class="block">📞 063-1234-5678</span>
+                        <span class="block">📍 전주시 덕진구 예시로 123</span>
+                        <span class="block">✉️ info@jeonju-e-rehab.com</span>
+                    </p>
+                </div>
+                
+                <!-- 진료시간 -->
+                <div>
+                    <h4 class="text-white font-bold mb-3">진료시간</h4>
+                    <p class="text-sm space-y-1">
+                        <span class="block">평일: 09:00 - 18:00</span>
+                        <span class="block">토요일: 09:00 - 13:00</span>
+                        <span class="block">일요일·공휴일: 휴진</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 text-center text-sm">
+                <p class="mb-2">
+                    사업자등록번호: 123-45-67890 | 대표: 홍길동 | 의료기관명: 전주E재활의학과의원
+                </p>
+                <p class="text-gray-500">
+                    © 2025 전주E재활의학과의원. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 하단 고정 CTA 바 (모바일 항상 / 데스크톱 스크롤 시) -->
+    <div class="bottom-cta fixed bottom-0 left-0 right-0 bg-white border-t border-gray-300 shadow-lg z-40 md:shadow-2xl">
+        <div class="container mx-auto px-4 py-3 flex gap-2 justify-center">
+            <a href="tel:063-1234-5678" class="flex-1 md:flex-none bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-center font-semibold transition">
+                📞 전화하기
+            </a>
+            <a href="http://pf.kakao.com/_xxxxx" target="_blank" class="flex-1 md:flex-none bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-3 rounded-lg text-center font-semibold transition">
+                💬 카톡상담
+            </a>
+            <a href="#consultation" class="flex-1 md:flex-none bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-center font-semibold transition">
+                📝 상담신청
+            </a>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade-in animation on scroll (IntersectionObserver)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FAQ toggle
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('span:last-child');
+            
+            answer.classList.toggle('active');
+            
+            if (answer.classList.contains('active')) {
+                icon.textContent = '−';
+            } else {
+                icon.textContent = '+';
+            }
+        }
+
+        // Bottom CTA bar show/hide on scroll (desktop only)
+        let lastScroll = 0;
+        const bottomCta = document.querySelector('.bottom-cta');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            // Desktop only (min-width: 1024px)
+            if (window.innerWidth >= 1024) {
+                if (currentScroll > 300) {
+                    bottomCta.classList.add('visible');
+                } else {
+                    bottomCta.classList.remove('visible');
+                }
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Consultation form submission
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Form data collection
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // TODO: Send to backend API or email service
+            console.log('Form submitted:', data);
+            
+            // Show thank you message
+            this.classList.add('hidden');
+            document.getElementById('thankYouMessage').classList.remove('hidden');
+            
+            // Optional: Track conversion event
+            // gtag('event', 'conversion', {'send_to': 'AW-XXXXX/XXXXX'});
+        });
+    </script>
+</body>
+</html>
